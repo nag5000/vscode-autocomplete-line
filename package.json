@@ -1,0 +1,63 @@
+{
+  "name": "autocomplete-line",
+  "displayName": "Autocomplete Line",
+  "description": "Auto complete lines by grepping the project",
+  "icon": "doc/logo.png",
+  "version": "0.0.1",
+  "publisher": "AlekseyNagovitsyn",
+  "repository": "https://github.com/nag5000/vscode-autocomplete-line",
+  "engines": {
+    "vscode": "^1.69.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:autocomplete-line.autocompleteLine",
+    "onCommand:autocomplete-line.autocompleteMultiline"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "autocomplete-line.autocompleteLine",
+        "title": "Autocomplete Line"
+      },
+      {
+        "command": "autocomplete-line.autocompleteMultiline",
+        "title": "Autocomplete Multiline"
+      }
+    ],
+    "keybindings": [
+      {
+          "command": "autocomplete-line.autocompleteLine",
+          "key": "ctrl+shift+Space",
+          "mac": "ctrl+shift+Space"
+      },
+      {
+          "command": "autocomplete-line.autocompleteMultiline",
+          "key": "ctrl+shift+alt+Space",
+          "mac": "ctrl+shift+cmd+Space"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.69.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
+    "@vscode/test-electron": "^2.1.5",
+    "eslint": "^8.18.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.0.0",
+    "typescript": "^4.7.4"
+  }
+}
