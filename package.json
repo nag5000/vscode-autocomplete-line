@@ -5,6 +5,7 @@
   "icon": "doc/logo.png",
   "version": "0.0.1",
   "publisher": "AlekseyNagovitsyn",
+  "license": "MIT",
   "repository": "https://github.com/nag5000/vscode-autocomplete-line",
   "engines": {
     "vscode": "^1.69.0"
